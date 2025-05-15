@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-piebkydbu&1=aczt+yu%^q2&1yp!vue@hxs4%ri&ka*x9cy=07"
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -150,7 +150,3 @@ SPECTACULAR_SETTINGS = {
     "VERSION": "1.0.0",
 }
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
-SECRET_KEY = os.environ.get(
-    "Rj42_denfF7kw_UcR5oWqpK_A2mRbYPpUZJSe2_SBbXzZzxtIeQPT50AWgO0SL4IwsOtTgbkYFh_eqFIlLHpIge"
-)
