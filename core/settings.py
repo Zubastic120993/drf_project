@@ -126,7 +126,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
-    "DEFAULT_SHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.BasicAuthentication",
@@ -143,3 +143,4 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Your project description',
 'VERSION': '1.0.0',
 }
+STATIC_ROOT = BASE_DIR / 'staticfiles'
