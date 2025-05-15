@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,11 @@ SECRET_KEY = "django-insecure-piebkydbu&1=aczt+yu%^q2&1yp!vue@hxs4%ri&ka*x9cy=07
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "drf-project-g7sb.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -140,7 +146,11 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "API",
-    'DESCRIPTION': 'Your project description',
-'VERSION': '1.0.0',
+    "DESCRIPTION": "Your project description",
+    "VERSION": "1.0.0",
 }
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+SECRET_KEY = os.environ.get(
+    "Rj42_denfF7kw_UcR5oWqpK_A2mRbYPpUZJSe2_SBbXzZzxtIeQPT50AWgO0SL4IwsOtTgbkYFh_eqFIlLHpIge"
+)
